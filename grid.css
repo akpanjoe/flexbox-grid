@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: gainsboro;
+}
+main{
+    width: 100%;
+    display: grid;
+    margin: auto;
+    min-height: 100vh;
+}
+.item1 { grid-area:Zone-A;
+         background-color: orange;
+}
+.item2 { grid-area:Zone-B;
+         background-color: yellow;
+}
+.item3 { 
+        grid-area:Zone-C;
+        background-color: green;
+}
+.item4 { 
+        grid-area:Zone-D;
+        background-color: rgb(28, 197, 240);
+}
+.item5 {
+        grid-area:Zone-E;
+        background-color: rgb(28, 197, 240);
+}
+
+@media only screen and (max-width:500px){
+   .grid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'Zone-A'
+    'Zone-B'
+    'Zone-C'
+    'Zone-D'
+    'Zone-E';
+  }
+}
+.grid-wrapper{
+  display: grid;
+  grid-template-areas: 
+       'Zone-A Zone-A Zone-A Zone-A Zone-B Zone-B'
+       'Zone-A Zone-A Zone-A Zone-A Zone-B Zone-B'
+       'Zone-C Zone-C Zone-C Zone-D Zone-D Zone-D'
+       'Zone-C Zone-C Zone-C Zone-E Zone-E Zone-E'
+       'Zone-C Zone-C Zone-C Zone-E Zone-E Zone-E'
+  ;
+  gap: 10px;
+  padding: 10px;
+}
+.grid-wrapper > div {
+  padding: 20px 0;
+  font-size: 30px;
+}
